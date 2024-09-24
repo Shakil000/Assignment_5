@@ -34,6 +34,6 @@ function toggleButton(id){
 }
 
 
-function modal(id){
-    document.getElementById(id);
-}
+// function modal(id){
+//     document.getElementById(id);
+// }
