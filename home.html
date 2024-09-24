@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- Tailwind and DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+     <!-- Tailwind Customization SCRIPT -->
+     <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>  
+</head>
+<body>
+    <main class="fixed w-full top-0 left-0">
+        <section class="bg-[#F9F7F3] mb-10">
+            <div class="navbar max-w-screen-xl mx-auto">
+                <div class="navbar-start">
+                    <div class="navbar-center">
+                        <a href="index.html" class="btn btn-ghost text-xl bg-[#B4F461]">Home</a>
+                      </div>
+                </div>
+                <div class="navbar-center">
+                    <img src="./assets/logo.png" alt="">
+                  <a class="btn btn-ghost text-xl font-bold">Donate Bangladesh</a>
+                </div>
+                <div class="navbar-end">
+                        <img src="./assets/coin.png" alt="">
+                        <a class="btn btn-ghost text-xl">5500 <span>BDT</span></a>
+                </div>
+              </div>
+        </section>
+    
+        <!-- Navbar End -->
+        </main>
+
+        <!-- Accordion design start -->
+         <section class="mt-48 max-w-screen-xl mx-auto">
+            <h1 class="text-5xl font-bold mb-7">Important FAQ <i class="fa-regular fa-circle-question"></i></h1>
+            <div class="collapse collapse-arrow">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl font-bold">What is the document object model(DOM) ?</div>
+                <div class="collapse-content">
+                  <p>Write your answer</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-bold">How do you select and element from the DOM?</div>
+                <div class="collapse-content">
+                  <p>Write your answer</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-bold">What is event delegation in the context of the DOM and why it is useful?</div>
+                <div class="collapse-content">
+                  <p>Write your answer</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-bold">How do you manipulates an element's attributes and style using the DOM?</div>
+                <div class="collapse-content">
+                  <p>Write your answer</p>
+                </div>
+              </div>
+         </section>
+        <!-- Accordion design end -->
+         <script src="js/utilities.js"></script>
+         <script src="js/modal.js"></script>
+</body>
+</html>
