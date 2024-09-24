@@ -107,13 +107,9 @@ document.getElementById('donation_button_feni').addEventListener('click', functi
 
 
 document.getElementById('button_history').addEventListener('click', function(){
-    // console.log("clicked");
     const amount = donation('donation_input_feni');
-    // console.log(amount)
     if(!isNaN(amount) ){
-        // console.log(amount);
         const heading = document.getElementById('feni').innerText;
-        // console.log(heading)
         const div = document.createElement('div');
         div.classList.add('border');
         div.innerHTML = `
