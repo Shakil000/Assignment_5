@@ -22,6 +22,7 @@ document.getElementById('donation_button_noakhali').addEventListener('click', fu
         document.getElementById('add_amount_noakhali').innerText = Increase_Amount;
         const navbarMainAmount = navbarAmount - amount;
         document.getElementById('navbar_amount').innerText = navbarMainAmount;
+        showModal();
     }
 });
 
@@ -106,7 +107,7 @@ document.getElementById('donation_button_feni').addEventListener('click', functi
     document.getElementById('add_amount_feni').innerText = Increase_Amount;
     const navbarMainAmount = navbarAmount - amount;
     document.getElementById('navbar_amount').innerText = navbarMainAmount;
-    return;
+    showModal();
 }
 });
 
@@ -166,7 +167,7 @@ document.getElementById('donation_button_quota').addEventListener('click', funct
     document.getElementById('add_amount_quota').innerText = Increase_Amount;
     const navbarMainAmount = navbarAmount - amount;
     document.getElementById('navbar_amount').innerText = navbarMainAmount;
-    return;
+    showModal();
 
     }
 });
