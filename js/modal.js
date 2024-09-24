@@ -16,18 +16,21 @@ document.getElementById('donation_button_noakhali').addEventListener('click', fu
         my_modal.remove();
         return;
     }
+
+    if(amount <= navbarAmount) {
         const Increase_Amount = amount + add_amount_value;
         document.getElementById('add_amount_noakhali').innerText = Increase_Amount;
         const navbarMainAmount = navbarAmount - amount;
         document.getElementById('navbar_amount').innerText = navbarMainAmount;
-
+        return;
+    }
 });
 
 document.getElementById('button_history').addEventListener('click', function(){
     const amount = donation('donation_input_noakhali');
     const navbarAmount = navbarTextFieldValue('navbar_amount');
 
-    if(amount < navbarAmount){
+    if(amount <= navbarAmount){
         const heading = document.getElementById('noakhali').innerText;
         const div = document.createElement('div');
         div.classList.add('border');
@@ -99,16 +102,19 @@ document.getElementById('donation_button_feni').addEventListener('click', functi
         my_modal.remove();
         return;
     }
+    if(amount <= navbarAmount){
     const Increase_Amount = amount + add_amount_value;
     document.getElementById('add_amount_feni').innerText = Increase_Amount;
     const navbarMainAmount = navbarAmount - amount;
     document.getElementById('navbar_amount').innerText = navbarMainAmount;
+    return;
+}
 });
 
 
 document.getElementById('button_history').addEventListener('click', function(){
     const amount = donation('donation_input_feni');
-    if(!isNaN(amount) ){
+    if(amount <= navbarAmount){
         const heading = document.getElementById('feni').innerText;
         const div = document.createElement('div');
         div.classList.add('border');
@@ -153,17 +159,21 @@ document.getElementById('donation_button_quota').addEventListener('click', funct
         my_modal.remove();
         return;
     }
+
+    if(amount <= navbarAmount){
     const Increase_Amount = amount + add_amount_value;
     document.getElementById('add_amount_quota').innerText = Increase_Amount;
     const navbarMainAmount = navbarAmount - amount;
     document.getElementById('navbar_amount').innerText = navbarMainAmount;
-   
+    return;
+
+    }
 });
 
 
 document.getElementById('button_history').addEventListener('click', function(){
     const amount = donation('donation_input_quota');
-    if(!isNaN(amount) ){
+    if(amount <= navbarAmount){
         const heading = document.getElementById('quota').innerText;
         const div = document.createElement('div');
         div.classList.add('border');
