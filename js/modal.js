@@ -115,6 +115,8 @@ document.getElementById('donation_button_feni').addEventListener('click', functi
 
 document.getElementById('button_history').addEventListener('click', function(){
     const amount = donation('donation_input_feni');
+    const navbarAmount = navbarTextFieldValue('navbar_amount');
+
     if(amount <= navbarAmount){
         const heading = document.getElementById('feni').innerText;
         const div = document.createElement('div');
@@ -174,6 +176,8 @@ document.getElementById('donation_button_quota').addEventListener('click', funct
 
 document.getElementById('button_history').addEventListener('click', function(){
     const amount = donation('donation_input_quota');
+    const navbarAmount = navbarTextFieldValue('navbar_amount');
+
     if(amount <= navbarAmount){
         const heading = document.getElementById('quota').innerText;
         const div = document.createElement('div');
