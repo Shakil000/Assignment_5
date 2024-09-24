@@ -1,7 +1,3 @@
-document.getElementById('modal_close').addEventListener('click', function(){
-    document.getElementById('my_modal').close;
-   
-})
 document.getElementById('donation_button_noakhali').addEventListener('click', function(){
     const amount = donation('donation_input_noakhali');
     if(isNaN(amount) || amount <= 0){
@@ -26,7 +22,6 @@ document.getElementById('donation_button_noakhali').addEventListener('click', fu
         document.getElementById('add_amount_noakhali').innerText = Increase_Amount;
         const navbarMainAmount = navbarAmount - amount;
         document.getElementById('navbar_amount').innerText = navbarMainAmount;
-        return;
     }
 });
 
