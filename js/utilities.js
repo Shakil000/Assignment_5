@@ -32,3 +32,8 @@ function toggleButton(id){
 
     document.getElementById(id).classList.remove('hidden');
 }
+
+
+function modal(id){
+    document.getElementById(id);
+}
