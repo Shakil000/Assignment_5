@@ -69,16 +69,16 @@
                     <input id="donation_input_noakhali" class="w-full py-2 rounded-md mb-2" type="text" placeholder="Write Donation Amount">
 
                    <!-- Open the modal using ID.showModal() method -->
-            <button id="donation_button_noakhali" class="w-full bg-[#B4F461] font-bold py-2 rounded-md btn" onclick="my_modal_1.showModal()">Donate Now</button>
-            <dialog id="my_modal_1" class="modal">
-              <div class="modal-box justify-center items-center">
+            <button id="donation_button_noakhali" class="w-full bg-[#B4F461] font-bold py-2 rounded-md btn" onclick="my_modal.showModal()">Donate Now</button>
+            <dialog id="my_modal" class="modal">
+              <div class="modal-box">
                 <h3 class="text-lg font-bold text-center">Congratulation!</h3>
-                <img src="assets/coin.png" alt="">
-                <p class="py-4">Your donation is successfully completed</p>
+                <!-- <img class="w-1/2 items-center justify-center" src="assets/coin.png" alt=""> -->
+                <p class="py-4 text-center">Your donation is successfully completed</p>
                 <div class="modal-action">
                   <form method="dialog">
                     <!-- if there is a button in form, it will close the modal -->
-                    <button class="btn bg-[#B4F461]">Close</button>
+                    <button id="modal_close" class="btn bg-[#B4F461]">Close</button>
                   </form>
                 </div>
               </div>
@@ -102,7 +102,21 @@
               <p class="py-3">
                 The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
                   <input id="donation_input_feni" class="w-full py-2 rounded-md mb-2" type="text" placeholder="Write Donation Amount">
-              <button id="donation_button_feni" class="w-full bg-[#B4F461] font-bold py-2 rounded-md">Donate Now</button>
+               <!-- Open the modal using ID.showModal() method -->
+            <button id="donation_button_feni" class="w-full bg-[#B4F461] font-bold py-2 rounded-md btn" onclick="my_modal.showModal()">Donate Now</button>
+            <dialog id="my_modal" class="modal">
+              <div class="modal-box">
+                <h3 class="text-lg font-bold text-center">Congratulation!</h3>
+                <!-- <img class="w-1/2 items-center justify-center" src="assets/coin.png" alt=""> -->
+                <p class="py-4 text-center">Your donation is successfully completed</p>
+                <div class="modal-action">
+                  <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button id="modal_close" class="btn bg-[#B4F461]">Close</button>
+                  </form>
+                </div>
+              </div>
+            </dialog>
             </div>
         </div>
 
@@ -120,7 +134,22 @@
               <p class="py-3">
                 The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
                   <input id="donation_input_quota" class="w-full py-2 rounded-md mb-2" type="text" placeholder="Write Donation Amount">
-              <button id="donation_button_quota" class="w-full bg-[#B4F461] font-bold py-2 rounded-md">Donate Now</button>
+
+                  <!-- Open the modal using ID.showModal() method -->     
+              <button id="donation_button_quota" class="w-full bg-[#B4F461] font-bold py-2 rounded-md btn" onclick="my_modal.showModal()">Donate Now</button>
+            <dialog id="my_modal" class="modal">
+              <div class="modal-box">
+                <h3 class="text-lg font-bold text-center">Congratulation!</h3>
+                <!-- <img class="w-1/2 items-center justify-center" src="assets/coin.png" alt=""> -->
+                <p class="py-4 text-center">Your donation is successfully completed</p>
+                <div class="modal-action">
+                  <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button id="modal_close" class="btn bg-[#B4F461]">Close</button>
+                  </form>
+                </div>
+              </div>
+            </dialog>
             </div>
         </div>
         <!-- Hero section design end -->

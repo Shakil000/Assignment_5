@@ -1,51 +1,34 @@
 document.getElementById('donation_button_noakhali').addEventListener('click', function(){
     const amount = donation('donation_input_noakhali');
-
-    //validation the donation amount
     if(isNaN(amount) || amount <= 0){
         alert("Hay! Man Are You Joking");
+        document.getElementById('donation_input_noakhali').value = '';
+        my_modal.remove();
         return;
     }
 
-    //Get the added donation amount
-    const add_amount_value = textFieldValue('add_amount_noakhali') || 0;
-   
+    const add_amount_value = textFieldValue('add_amount_noakhali');
+    const navbarAmount = navbarTextFieldValue('navbar_amount');
 
-    // get value from navbar main amount
-    const navbarAmount = navbarTextFieldValue('navbar_amount') || 0;
-
-    
     if(amount > navbarAmount) {
         alert("You don't have enough balance to donate");
         document.getElementById('donation_input_noakhali').value = '';
+        my_modal.remove();
         return;
     }
-    // Value added here
-const Increase_Amount = amount + add_amount_value;
-// Set the value here
-document.getElementById('add_amount_noakhali').innerText = Increase_Amount;
-// Value subtract here
-const navbarMainAmount = navbarAmount - amount;
- //console.log(navbarMainAmount)
-//Set the value here
-document.getElementById('navbar_amount').innerText = navbarMainAmount;
-// console.log(heading)
-   
-   
+        const Increase_Amount = amount + add_amount_value;
+        document.getElementById('add_amount_noakhali').innerText = Increase_Amount;
+        const navbarMainAmount = navbarAmount - amount;
+        document.getElementById('navbar_amount').innerText = navbarMainAmount;
+
 });
 
-
 document.getElementById('button_history').addEventListener('click', function(){
-    // console.log("clicked");
     const amount = donation('donation_input_noakhali');
-    // console.log(amount)
-    // get value from navbar main amount
     const navbarAmount = navbarTextFieldValue('navbar_amount');
 
-    if(!isNaN(amount) && navbarAmount > amount){
-        // console.log(amount);
+    if(amount < navbarAmount){
         const heading = document.getElementById('noakhali').innerText;
-        // console.log(heading)
         const div = document.createElement('div');
         div.classList.add('border');
         div.innerHTML = `
@@ -102,28 +85,24 @@ document.getElementById('donation_button_feni').addEventListener('click', functi
     const amount = donation('donation_input_feni');
     if(isNaN(amount) || amount <= 0){
         alert("Hay! Man Are You Joking");
+        document.getElementById('donation_input_feni').value = '';
+        my_modal.remove();
         return;
-    }else{
-        alert("Thank You");
-        //console.log(amount);
-    const add_amount_value = textFieldValue('add_amount_feni');
-    //console.log(add_amount_value);
-    // Value added here
-    const Increase_Amount = amount + add_amount_value;
-    // Set the value here
-    document.getElementById('add_amount_feni').innerText = Increase_Amount;
+    }
 
-    // get value from navbar main amount
+    const add_amount_value = textFieldValue('add_amount_feni');
     const navbarAmount = navbarTextFieldValue('navbar_amount');
-        //console.log(navbarAmount)
-        // Value subtract here
+
+    if(amount > navbarAmount) {
+        alert("You don't have enough balance to donate");
+        document.getElementById('donation_input_feni').value = '';
+        my_modal.remove();
+        return;
+    }
+    const Increase_Amount = amount + add_amount_value;
+    document.getElementById('add_amount_feni').innerText = Increase_Amount;
     const navbarMainAmount = navbarAmount - amount;
-    //console.log(navbarMainAmount)
-    //Set the value here
     document.getElementById('navbar_amount').innerText = navbarMainAmount;
-    // console.log(heading)
-}
-   
 });
 
 
@@ -160,42 +139,29 @@ document.getElementById('button_history').addEventListener('click', function(e){
     toggleButton('history_section');
 });
 
-// document.getElementById('button_donation').addEventListener('click', function(e){
-//     e.preventDefault();
-   
-// })
 
-
-// document.getElementById('button_history').addEventListener('click', function(e){
-//     e.preventDefault();
-//     toggleButton('history_section');
-// })
-
+// Donation for quota
 document.getElementById('donation_button_quota').addEventListener('click', function(){
     const amount = donation('donation_input_quota');
     if(isNaN(amount) || amount <= 0){
         alert("Hay! Man Are You Joking");
+        document.getElementById('donation_input_quota').value = '';
+        my_modal.remove();
         return;
-    }else{
-        alert("Thank You");
-        //console.log(amount);
+    }
     const add_amount_value = textFieldValue('add_amount_quota');
-    //console.log(add_amount_value);
-    // Value added here
+    const navbarAmount = navbarTextFieldValue('navbar_amount');
+    if(amount > navbarAmount) {
+        alert("You don't have enough balance to donate");
+        document.getElementById('donation_input_quota').value = '';
+        my_modal.remove();
+        return;
+    }
     const Increase_Amount = amount + add_amount_value;
     // Set the value here
     document.getElementById('add_amount_quota').innerText = Increase_Amount;
-
-    // get value from navbar main amount
-    const navbarAmount = navbarTextFieldValue('navbar_amount');
-        //console.log(navbarAmount)
-        // Value subtract here
     const navbarMainAmount = navbarAmount - amount;
-    //console.log(navbarMainAmount)
-    //Set the value here
     document.getElementById('navbar_amount').innerText = navbarMainAmount;
-    // console.log(heading)
-}
    
 });
 
@@ -232,14 +198,3 @@ document.getElementById('button_history').addEventListener('click', function(e){
     e.preventDefault();
     toggleButton('history_section');
 });
-
-// document.getElementById('button_donation').addEventListener('click', function(e){
-//     e.preventDefault();
-   
-// })
-
-
-// document.getElementById('button_history').addEventListener('click', function(e){
-//     e.preventDefault();
-//     toggleButton('history_section');
-// })
